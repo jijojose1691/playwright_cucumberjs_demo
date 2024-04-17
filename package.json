@@ -1,0 +1,28 @@
+{
+  "name": "e2e-playwright-cucumberjs",
+  "version": "1.0.0",
+  "description": "Sample Playwright tests with Cucumber JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js  --config features/config/cucumber.js",
+    "test:chrome": "set BROWSER=chrome && npm run test",
+    "test:firefox": "set BROWSER=firefox && npm run test",
+    "test:webkit": "set BROWSER=webkit && npm run test"
+  },
+  "keywords": [
+    "Playwright",
+    "Cucumberjs",
+    "E2E",
+    "end-to-end"
+  ],
+  "author": "Jijo Jose <jijojose1691@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.4.0",
+    "app-root-path": "^3.1.0",
+    "winston": "^3.13.0"
+  }
+}
