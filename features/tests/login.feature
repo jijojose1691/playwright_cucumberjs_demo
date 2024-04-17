@@ -3,7 +3,7 @@ Feature: Login Page
   @tagRegression @P0 @validLogin
   Scenario Outline: Login with valid credentials
     Given I am on the login screen
-    Given I fill the login form with valid username "<username>"
+    When I fill the login form with valid username "<username>"
     Then I should be able to see the home screen
 
     Examples: 
@@ -23,7 +23,7 @@ Feature: Login Page
   @tagRegression @P0 @invalidLogin
   Scenario Outline: Invalid Login
     Given I am on the login screen
-    Given I fill the login form with "<username>" and "<password>"
+    When I fill the login form with "<username>" and "<password>"
     Then Verify error message "<errormessage>" is shown
 
     Examples: 
