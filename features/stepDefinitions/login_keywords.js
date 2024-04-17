@@ -9,37 +9,6 @@ Given('I am on the login screen', async function () {
     await this.loginPage.verifyLoginPageIsDisplayed();
 });
 
-When('I fill the login form with valid credentials', async function () {
-    let poManager = new POManager(this.page)
-    this.loginPage = poManager.getLoginPage();
-    await this.loginPage.submitLoginForm();
-});
-
-When('I fill the login form with invalid credentials', async function () {
-    let poManager = new POManager(this.page)
-    this.loginPage = poManager.getLoginPage();
-    await this.loginPage.submitLoginFormWrongUserCred();
-});
-
-When('I fill the login form with empty credentials', async function () {
-    let poManager = new POManager(this.page)
-    this.loginPage = poManager.getLoginPage();
-    await this.loginPage.submitLoginFormUsingEmptyCred();
-});
-
-When('I fill the login form with vaild user but invaild password credentials', async function () {
-    let poManager = new POManager(this.page)
-    this.loginPage = poManager.getLoginPage();
-    await this.loginPage.submitLoginFormUsingVaildUserButWrongPassword();
-});
-
-When('I fill the login form with invaild user but vaild password credentials', async function () {
-    let poManager = new POManager(this.page)
-    this.loginPage = poManager.getLoginPage();
-    await this.loginPage.submitLoginFormUsingWrongUserVaildPassword();
-});
-
-
 Then('I should be able to see the home screen', async function () {
     let poManager = new POManager(this.page)
     this.loginPage = poManager.getLoginPage();
@@ -69,5 +38,3 @@ Then('Verify error message {string} is shown', async function (errorMsg) {
     this.loginPage = poManager.getLoginPage();
     await this.loginPage.verifyErrorMsg(errorMsg);
 });
-
-
