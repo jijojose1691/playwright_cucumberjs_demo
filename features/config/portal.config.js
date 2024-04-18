@@ -1,7 +1,7 @@
-const { env } = process;
+require('dotenv').config();
 
 module.exports = {
-    BASE_URL: env.BASE_URL || 'https://www.saucedemo.com/',
-    USER_NAME: env.USER_NAME || 'standard_user',
-    PASSWORD: env.PASSWORD || 'secret_sauce',
+    BASE_URL: process.env.BASE_URL || 'https://www.saucedemo.com/',
+    USER_NAME: process.env.USER_NAME || 'standard_user',
+    PASSWORD: process.env.PASSWORD || 'secret_sauce',
 };

@@ -23,6 +23,7 @@
   "dependencies": {
     "@cucumber/cucumber": "^10.4.0",
     "app-root-path": "^3.1.0",
+    "dotenv": "^16.4.5",
     "winston": "^3.13.0"
   }
 }
