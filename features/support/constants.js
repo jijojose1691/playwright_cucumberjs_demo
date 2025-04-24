@@ -1,10 +1,10 @@
-const appRoot = require('app-root-path')
-const path = require('path')
-module.exports = {
-    PORTAL_TITLE: "Swag Labs",
-    WRONG_USERNAME: "wrong_username",
-    WRONG_PASSWORD: "wrong_password",
-    PATHS: {
+import appRoot from 'app-root-path';
+import path from 'path';
+
+export const PORTAL_TITLE = "Swag Labs",
+    WRONG_USERNAME = "wrong_username",
+    WRONG_PASSWORD = "wrong_password",
+    PATHS = {
         CUCUMBER_REPORT_PATH: path.join(
             `${appRoot}/report/`),
         RERUN_FILE_PATH: path.join(
@@ -13,5 +13,4 @@ module.exports = {
         LOG_FILE_PATH: path.join(
             `${appRoot}/report/logs/`
         )
-    }
-}
+    };
